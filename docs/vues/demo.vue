@@ -1,6 +1,8 @@
 <template>
     <div class="hello">Hello {{ who }}</div>
-    <div><button type="button" @click="increment">demo</button></div>
+    <div>
+        <button type="button" @click="increment">demo点击</button>
+    </div>
 </template>
 
 <script>
@@ -15,7 +17,7 @@ module.exports = {
     methods: {
         increment() {
             store.commit('increment');
-            store.state.count;
+            console.log(store.state.count);
         }
     }
 }

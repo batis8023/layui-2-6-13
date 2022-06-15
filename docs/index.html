@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>layui 2.6.13</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./static/layuis/2.6.13/css/layui.css">
+    <script src="./static/layuis/2.6.13/layui.js"></script>
 </head>
 
 <body>
@@ -13,3 +16,11 @@
 </body>
 
 </html>
+<script>
+    layui.use(["layer"], function () {
+        var $ = layui.$;
+        var layer = layui.layer;
+
+        layui.msg("layer 2.6.13");
+    })
+</script>

@@ -10,9 +10,7 @@ module.exports = {
             who: 'world'
         }
     },
-    created() {
-        console.log(store.state.count);
-    },
+    created() { },
     mounted() { },
     methods: {
         increment() {

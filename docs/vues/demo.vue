@@ -4,11 +4,15 @@
 
 <script>
 module.exports = {
-    data: function () {
+    data() {
         return {
             who: 'world'
         }
-    }
+    },
+    created() {
+        console.log(store.state.count);
+    },
+    mounted() { },
 }
 </script>
 

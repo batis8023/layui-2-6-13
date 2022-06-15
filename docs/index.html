@@ -1,26 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lan g=" en ">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layui 2.6.13</title>
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./static/layuis/2.6.13/css/layui.css">
-    <script src="./static/layuis/2.6.13/layui.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layui 2.6.13</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <script src="./static/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="./static/layuis/2.6.13/css/layui.css">
+  <script src="./static/layuis/2.6.13/layui.js"></script>
+  <script src="./static/vue/axios.min.js"></script>
+  <script src="./static/vue/vue.global.js"></script>
+  <script src="./static/vue/vue-router.global.js"></script>
+  <script src="./static/vue/vuex.global.js"></script>
+  <script src="./static/vue/vue3-sfc-loader.js"></script>
+  <script src="./static/vue/httpVueLoader.js"></script>
 </head>
 
 <body>
-
+  <div id="page"></div>
 </body>
 
 </html>
 <script>
-    layui.use(["layer"], function () {
-        var $ = layui.$;
-        var layer = layui.layer;
-
-        layer.msg("layer 2.6.13");
-    })
+  $(function () {
+    let app = Vue.createApp({
+      data() { },
+      created() { },
+      mounted() {
+        layui.use(["layer"], function () {
+          var $ = layui.$;
+          var layer = layui.layer;
+          layer.msg("layer 2.6.13");
+        });
+      },
+      methods: {}
+    });
+    app.$mount("#page");
+  })
 </script>

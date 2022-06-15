@@ -56,30 +56,29 @@
             }
         }
     })
-    $(function () {
-        // ---分界线---
-        const app = Vue.createApp({
-            data() { },
-            created() { },
-            mounted() {
-                layui.use(["layer"], function () {
-                    var $ = layui.$;
-                    var layer = layui.layer;
-                    layer.msg("layer 2.6.13");
-                });
-                store.commit('increment');
-                console.log(store.state.count);
-            },
-            methods: {
-                increment() {
-                    this.$store.commit('increment')
-                    console.log(this.$store.state.count)
-                }
+    // 创建 Vue 实例
+    const app = Vue.createApp({
+        data() { },
+        created() { },
+        mounted() {
+            layui.use(["layer"], function () {
+                var $ = layui.$;
+                var layer = layui.layer;
+                layer.msg("欢迎访问 layer 2.6.13");
+            });
+            store.commit('increment');
+            console.log(store.state.count);
+        },
+        methods: {
+            increment() {
+                this.$store.commit('increment')
+                console.log(this.$store.state.count)
             }
-        });
-        app.use(router)
-        app.use(store)
-        app.mount('#app')
-
-    })
+        }
+    });
+    // 使用插件
+    app.use(router)
+    app.use(store)
+    // 渲染
+    app.mount('#app')
 </script>
